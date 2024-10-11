@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        .header {
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px;
+        }
+
+        .navbar button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .navbar button:hover {
+            background-color: #0056b3;
+        }
+
+        .sign-out {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .sign-out button {
+            padding: 10px 20px;
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .sign-out button:hover {
+            background-color: darkred;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="logo">My Website Logo</div>
+    </div>
+
+    <div class="navbar">
+        <button onclick="goToPage('page1.html')">Page 1</button>
+        <button onclick="goToPage('page2.html')">Page 2</button>
+        <button onclick="goToPage('page3.html')">Page 3</button>
+    </div>
+
+    <div class="sign-out">
+        <button onclick="signOut()">Sign Out</button>
+    </div>
+
+    <script>
+        function goToPage(page) {
+            window.location.href = page; // Redirect to different pages
+        }
+
+        function signOut() {
+            window.location.href = "index.html";  // Redirect to login page
+        }
+    </script>
+
+</body>
+</html>
