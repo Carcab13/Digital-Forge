@@ -62,25 +62,30 @@
     </div>
 
     <script>
+        // List of valid users with their IDs and passwords
+        const users = [
+            { userId: 'admin', password: 'CB-1YQ4YR-Admin' },
+            { userId: 'Ayden', password: 'AC-EB3HB-DF' },
+        ];
+
         function login() {
             const userId = document.getElementById("userId").value;
             const password = document.getElementById("password").value;
             const errorMessage = document.getElementById("error-message");
 
-            // Clear any previous error message
-            errorMessage.textContent = "";
+            // Find the user from the list
+            const user = users.find(user => user.userId === userId && user.password === password);
 
-            // Dummy validation for user ID and password
-            if (userId === 'admin' && password === '123') {
-                // Store login status in localStorage
+            if (user) {
+                // Store login status and userId in localStorage
                 localStorage.setItem('loggedIn', 'true');
-                localStorage.setItem('userId', userId);
+                localStorage.setItem('userId', user.userId);
 
                 // Redirect to homepage
                 window.location.href = 'homepage.html';
             } else {
-                // Show error message if credentials are invalid
-                errorMessage.textContent = "Invalid login credentials!";
+                // Display error message for invalid credentials
+                errorMessage.textContent = 'Invalid ID or password!';
             }
         }
 

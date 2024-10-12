@@ -152,9 +152,8 @@
         <!-- Tab Contents -->
         <div id="tab1" class="tab-content active">
             <div class="btn-container">
-                <button>Button 2A</button>
+                <button onclick="redirectToPage1()">Answer Bot</button>
                 <button>Button 2B</button>
-                <button>Button 2C</button>
             </div>
         </div>
 
@@ -193,6 +192,9 @@
             localStorage.removeItem('loggedIn');
             localStorage.removeItem('userId');
             window.location.href = 'index.html';
+        }
+        function redirectToPage1() {
+            window.location.href = 'Answer-bot.html';
         }
     </script>
 
