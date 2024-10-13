@@ -12,6 +12,8 @@
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
         }
         /* Sidebar Styling */
         .sidebar {
@@ -134,6 +136,18 @@
             margin-top: 100px;
             font-size: 1.5rem;
         }
+        .content {
+      flex: 1;
+      padding: 20px;
+    }
+
+    /* Footer is placed at the bottom */
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
     </style>
 </head>
 <body>
@@ -153,7 +167,7 @@
         <div id="tab1" class="tab-content active">
             <div class="btn-container">
                 <button onclick="redirectToPage1()">Answer Bot</button>
-                <button>Button 2B</button>
+                <button onclick="redirectToPage2()">Zoom-out</button>
             </div>
         </div>
 
@@ -162,7 +176,14 @@
             <div class="btn-container">
             </div>
         </div>
-
+        <footer>
+            <div style="text-align: center; padding: 20px; background-color: #333; color: white;">
+              <p>&copy; Digital Forge. All rights reserved.</p>
+              <nav>
+                <a href="mailto:carter.boldt@icloud.com?subject=Contact%20Request" style="color: white;">Have any Ideas? Contact Us</a>
+              </nav>
+            </div>
+          </footer>
     <script>
         function openTab(tabName) {
             // Hide all tab contents
@@ -195,6 +216,9 @@
         }
         function redirectToPage1() {
             window.location.href = 'Answer-bot.html';
+        }
+        function redirectToPage2() {
+            window.location.href = 'Zoom-out.html'
         }
     </script>
 
